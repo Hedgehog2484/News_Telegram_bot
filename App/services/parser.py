@@ -12,8 +12,6 @@ from load_config import RBC_LINK, KREMLIN_LINK
 async def parse_rbc() -> dict:
     async with aiohttp.ClientSession() as session:
         async with session.get(RBC_LINK) as response:
-            print(f"\nRBC Status: {response.status} ({datetime.datetime.now()})")
-
             html = await response.text()
             soup = BeautifulSoup(html, "html.parser")
 
@@ -28,8 +26,6 @@ async def parse_rbc() -> dict:
 async def parse_kremlin() -> dict:
     async with aiohttp.ClientSession() as session:
         async with session.get(KREMLIN_LINK) as response:
-            print(f"Kremlin Status: {response.status} ({datetime.datetime.now()})")
-            
             html = await response.text()
             soup = BeautifulSoup(html, "html.parser")
 
