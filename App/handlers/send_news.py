@@ -1,6 +1,7 @@
 from aiogram.types import ReplyKeyboardMarkup, KeyboardButton, Message
 
-from services import db_add_user, parse_kremlin, parse_rbc
+from ..services import db_add_user, parse_kremlin, parse_rbc
+
 
 async def kremlin_news_message(message: Message) -> None:
     await db_add_user(message.from_user.id)

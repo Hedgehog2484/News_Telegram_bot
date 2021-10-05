@@ -1,7 +1,7 @@
 from aiogram.types import ReplyKeyboardMarkup, KeyboardButton
 
-from services import db_add_user, db_update_user
-from load_config import ON_RBC_TEXT, OFF_RBC_TEXT, ON_KREMLIN_TEXT, OFF_KREMLIN_TEXT
+from ..services import db_add_user, db_update_user
+from ..load_config import ON_RBC_TEXT, OFF_RBC_TEXT, ON_KREMLIN_TEXT, OFF_KREMLIN_TEXT
 
 
 async def kremlin_notify(message) -> None:
